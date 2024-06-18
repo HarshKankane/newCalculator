@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.calculator {
+    background: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.display {
+    margin-bottom: 20px;
+}
+
+.display input {
+    width: 100%;
+    height: 60px;
+    font-size: 30px;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #000000;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    width: 100%;
+    height: 60px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: rgb(251, 254, 252);
+    color: #d5480c;
+}
+
+.btn.operator {
+    background-color: #869d9e;
+    color: #3a1111;
+}
+
+.btn.equal {
+    grid-column: span 2;
+}
+
+#checkbox {
+    visibility: hidden;
+}
+
+.toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.toggle-label {
+    width: 4rem;
+    height: 2rem;
+    background-color: #010102;
+    display: inline-block;
+    position: relative;
+    border-radius: 10rem;
+}
+
+.toggle-ball {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: #929ea2;
+    display: inline-block;
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    transition: all 0.2s linear;
+}
+
+#checkbox:checked + .toggle-label .toggle-ball {
+    transform: translateX(2rem);
+    background-color: #080b0c;
+}
+
+.container.dark-mode {
+    background-color: black;
+    border-color: #0a0505;
+    color: white;
+}
+
+.container.dark-mode .calculator {
+    background-color: #d7e0e7;
+    border-color: #555;
+}
+
+.container.dark-mode .display input {
+    background-color: #222;
+    color: white;
+}
+
+.container.dark-mode .buttons .btn {
+    background-color: #f8ecec;
+    color: rgb(56, 30, 160);
+    border-color: #000000;
+    box-shadow: -8px -8px 15px rgba(114, 115, 189, 0.1), 5px 5px 15px rgba(212, 193, 229, 0.2);
+}
+
+.container.dark-mode .btn.operator {
+    background-color: #4e0a7e;
+    color: #77f915;
+}
+
+.container.dark-mode .toggle-label {
+    background-color: #d7e0e7;
+}
